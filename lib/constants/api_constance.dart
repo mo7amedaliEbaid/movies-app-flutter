@@ -1,7 +1,7 @@
 class ApiConstant {
   static final String BASE_URL = 'http://api.themoviedb.org/3/';
 
-  static const  String API_KEY = "?api_key=78b9f63937763a206bff26c070b94158";
+  static const  String API_KEY = "?api_key=***********Your-Key***************";
 
   static final GET_TOKEN="authentication/token/new";
   static final GET_SESSION="authentication/session/new";
