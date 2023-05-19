@@ -3,7 +3,7 @@
 Based on TMDB api, an app provides a great help for movie buffs ,provides sections for popular , upcoming,etc,provides a search engine ,connect the user to tmdb account ,watchlist and favourite list are provided,auth with google account is provided.
 
 # Used Packages
-  shared_preferences: ^2.1.0
+  shared_preferences: ^2.1.0 <br />
   provider: ^6.0.5
   http: ^0.13.5
   intl: ^0.17.0
