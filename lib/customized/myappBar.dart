@@ -7,6 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../screens/search_screens/search_screen.dart';
 import '../screens/user_screens/TMDBUser_Screen.dart';
 
+
 class MyAppBar extends StatefulWidget implements PreferredSizeWidget {
   MyAppBar({Key? key}) : super(key: key);
 
