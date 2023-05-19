@@ -1,6 +1,3 @@
-## Personal.
-I am a loner in programming world . I dont have any friends in programming field . so there is no one to tell me about his opinion in my code or my app. so a Star that any one would give to this repo may be a greet motivation for me to keep coding. this little thing would tell me that i am not just nobody.
-
 # my_movies_app_flutter
 
 Based on TMDB api, an app provides a great help for movie buffs ,provides sections for popular , upcoming,etc,provides a search engine ,connect the user to tmdb account ,watchlist and favourite list are provided,auth with google account is provided.
