@@ -4,12 +4,12 @@ Based on TMDB api, an app provides a great help for movie buffs ,provides sectio
 
 # Used Packages
   shared_preferences: ^2.1.0 <br />
-  provider: ^6.0.5
-  http: ^0.13.5
-  intl: ^0.17.0
-  firebase_core: ^2.8.0
-  firebase_auth: ^4.3.0
-  google_sign_in: ^6.0.2
+  provider: ^6.0.5 <br />
+  http: ^0.13.5 <br />
+  intl: ^0.17.0 <br />
+  firebase_core: ^2.8.0 <br />
+  firebase_auth: ^4.3.0 <br />
+  google_sign_in: ^6.0.2 <br />
   
   # ScreenShots.
   
