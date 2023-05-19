@@ -15,6 +15,9 @@ Based on TMDB api, an app provides a great help for movie buffs ,provides sectio
   
   ![alt text](https://github.com/mo7amedaliEbaid/movies_app_flutter/blob/master/screen_shots/movies_main.png?raw=true)
   ![alt text](https://github.com/mo7amedaliEbaid/movies_app_flutter/blob/master/screen_shots/genres.png?raw=true)
+  ![alt text](https://github.com/mo7amedaliEbaid/movies_app_flutter/blob/master/screen_shots/movie_details1.png?raw=true)
+  ![alt text](https://github.com/mo7amedaliEbaid/movies_app_flutter/blob/master/screen_shots/tv.png?raw=true)
+  ![alt text](https://github.com/mo7amedaliEbaid/movies_app_flutter/blob/master/screen_shots/signin.png?raw=true)
 
 ## Getting Started
 
