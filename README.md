@@ -1,16 +1,46 @@
 # my_movies_app_flutter
 
-A new Flutter project.
+Based on TMDB api,
 
-## Getting Started
+an app provides a great help for movie buffs ,
 
-This project is a starting point for a Flutter application.
+provides sections for popular , upcoming,etc,
 
-A few resources to get you started if this is your first Flutter project:
+provides a search engine ,
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+connect the user to tmdb account ,
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+watchlist and favourite list are provided,
+
+auth with google account is provided.
+
+# Used Packages
+  shared_preferences: ^2.1.0 <br />
+  provider: ^6.0.5 <br />
+  http: ^0.13.5 <br />
+  intl: ^0.17.0 <br />
+  firebase_core: ^2.8.0 <br />
+  firebase_auth: ^4.3.0 <br />
+  google_sign_in: ^6.0.2 <br />
+  
+  # ScreenShots.
+  
+  ![alt text](https://github.com/mo7amedaliEbaid/movies_app_flutter/blob/master/screen_shots/movies_main.png?raw=true)
+  
+  
+  ![alt text](https://github.com/mo7amedaliEbaid/movies_app_flutter/blob/master/screen_shots/genres.png?raw=true)
+  
+  
+  ![alt text](https://github.com/mo7amedaliEbaid/movies_app_flutter/blob/master/screen_shots/movie_details1.png?raw=true)
+  
+  
+  ![alt text](https://github.com/mo7amedaliEbaid/movies_app_flutter/blob/master/screen_shots/tv.png?raw=true)
+  
+  
+  ![alt text](https://github.com/mo7amedaliEbaid/movies_app_flutter/blob/master/screen_shots/signin.png?raw=true)  
+  
+  you can find more screenshots in my_movies_app_flutter/screen_shots
+
+
+
+
