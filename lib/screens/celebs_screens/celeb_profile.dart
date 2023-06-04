@@ -224,7 +224,7 @@ class _CelebProfileState extends State<CelebProfile> {
                         Container(
                           margin: EdgeInsets.only(bottom: 20),
                            // height: size.height*.3,
-                            width: size.width*.64,
+                            width: size.width*.6,
                             child: Text(data.celebProfileById.alsoKnownAs.toString(),style: deepbold,maxLines: 20,))
                       ],
                     ),

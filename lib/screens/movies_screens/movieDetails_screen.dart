@@ -69,118 +69,122 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Column(
-                      children: [
-                        data.movieById.backdropPath==null?
-                        Container(
-                          margin: EdgeInsets.fromLTRB(10,10,10,0),
-                          height: size.height * .35,
-                          width: size.width * .45,
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: NetworkImage(
-                                      "${ApiConstant.IMAGE_ORIG_POSTER}${data.movieById.posterPath}"),
-                                  fit: BoxFit.fill)),
-                        ):
-                        Container(
-                          margin: EdgeInsets.fromLTRB(10,10,10,0),
-                          height: size.height * .33,
-                          width: size.width * .45,
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: NetworkImage(
-                                      "${ApiConstant.IMAGE_ORIG_POSTER}${data.movieById.backdropPath}"),
-                                  fit: BoxFit.fill)),
-                        ),
-                        InkWell(
-                          onTap: ()async{
-                            SharedPreferences prefs=await SharedPreferences.getInstance();
-                            String? pass=prefs.getString('pass');
-                            if(pass !=null){
-                              userdata.addTomoviesWatchlist(data.movieById.id!);
-                            }else {
-                              Navigator.of(context).push(
-                                  DismissibleDialog<void>());
-
-                            }
-                          },
-
-                          child: Container(
-                            height: size.height * .05,
+                    Flexible(
+                      child: Column(
+                        children: [
+                          data.movieById.backdropPath==null?
+                          Container(
+                            margin: EdgeInsets.fromLTRB(10,10,10,0),
+                            height: size.height * .25,
                             width: size.width * .45,
                             decoration: BoxDecoration(
-                              color: Colors.amber,
-                              //borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: Center(
-                              child: Text("Add To Watchlist",style: blackbold,),
-                            ),
-                          ),
-                        ),
-                        InkWell(
-                          onTap: ()async{
-                            SharedPreferences prefs=await SharedPreferences.getInstance();
-                            String? pass=prefs.getString('pass');
-                            if(pass !=null){
-                              userdata.addTomoviesFAVlist(data.movieById.id!);
-                            }else {
-                              Navigator.of(context).push(
-                                  DismissibleDialog<void>());
-
-                            }
-                          },
-                          child: Container(
-                            height: size.height * .05,
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        "${ApiConstant.IMAGE_ORIG_POSTER}${data.movieById.posterPath}"),
+                                    fit: BoxFit.fill)),
+                          ):
+                          Container(
+                            margin: EdgeInsets.fromLTRB(10,10,10,0),
+                            height: size.height * .25,
                             width: size.width * .45,
                             decoration: BoxDecoration(
-                              color: Colors.red,
-                              //borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: Center(
-                              child: Text("Add To Favourites",style: blackbold,),
+                                image: DecorationImage(
+                                    image: NetworkImage(
+                                        "${ApiConstant.IMAGE_ORIG_POSTER}${data.movieById.backdropPath}"),
+                                    fit: BoxFit.fill)),
+                          ),
+                          InkWell(
+                            onTap: ()async{
+                              SharedPreferences prefs=await SharedPreferences.getInstance();
+                              String? pass=prefs.getString('pass');
+                              if(pass !=null){
+                                userdata.addTomoviesWatchlist(data.movieById.id!);
+                              }else {
+                                Navigator.of(context).push(
+                                    DismissibleDialog<void>());
+
+                              }
+                            },
+
+                            child: Container(
+                              height: size.height * .05,
+                              width: size.width * .45,
+                              decoration: BoxDecoration(
+                                color: Colors.amber,
+                                //borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Center(
+                                child: Text("Add To Watchlist",style: blackbold,),
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                          InkWell(
+                            onTap: ()async{
+                              SharedPreferences prefs=await SharedPreferences.getInstance();
+                              String? pass=prefs.getString('pass');
+                              if(pass !=null){
+                                userdata.addTomoviesFAVlist(data.movieById.id!);
+                              }else {
+                                Navigator.of(context).push(
+                                    DismissibleDialog<void>());
+
+                              }
+                            },
+                            child: Container(
+                              height: size.height * .05,
+                              width: size.width * .45,
+                              decoration: BoxDecoration(
+                                color: Colors.red,
+                                //borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Center(
+                                child: Text("Add To Favourites",style: blackbold,),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
 
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                            width: size.width * .45,
-                            margin: EdgeInsets.all(10),
-                            child: Center(
-                                child: Text(
-                              data.movieById.title ?? "",
-                              style: normalBoldWhite,
+                    Flexible(
+                      child: Column(
+                         crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                              width: size.width * .5,
+                              margin: EdgeInsets.all(10),
+                              child: Center(
+                                  child: Text(
+                                data.movieById.title ?? "",
+                                style: normalBoldWhite,
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 3,
+                              ))),
+                          data.movieById.overview==''?Container():
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 10, 0, 5),
+                            child: Text(
+                              "OverView",
+                              style: bluebold,
+                            ),
+                          ),
+                          Container(
+                            width: size.width * .48,
+                            // padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              data.movieById.overview ?? '',
+                              style: TextStyle(
+                                  wordSpacing: 0,
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 0,
+                                  fontSize: 15),
+                              textAlign: TextAlign.start,
+                              maxLines: 15,
                               overflow: TextOverflow.ellipsis,
-                              maxLines: 3,
-                            ))),
-                        data.movieById.overview==''?Container():
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 10, 0, 5),
-                          child: Text(
-                            "OverView",
-                            style: bluebold,
+                            ),
                           ),
-                        ),
-                        Container(
-                          width: size.width * .5,
-                          // padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            data.movieById.overview ?? '',
-                            style: TextStyle(
-                                wordSpacing: 0,
-                                fontWeight: FontWeight.bold,
-                                letterSpacing: 0,
-                                fontSize: 15),
-                            textAlign: TextAlign.start,
-                            maxLines: 15,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        ),
-                      ],
+                        ],
+                      ),
                     )
                   ],
                 ),
@@ -195,7 +199,7 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
                 data.crew.isEmpty?Container():
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: 20),
-                  height: size.height * .3,
+                  height: size.height * .27,
                   width: size.width * .9,
                   child: ListView.builder(
                       shrinkWrap: true,
@@ -215,7 +219,7 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
                                     ),
                                   )
                                 : Container(
-                                    height: size.height * .3,
+                                    height: size.height * .27,
                                     width: size.width * .35,
                                     decoration: BoxDecoration(
                                         image: DecorationImage(
@@ -264,7 +268,7 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
                 data.similarMovies.isEmpty?Container():
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: 20),
-                  height: size.height * .3,
+                  height: size.height * .27,
                   width: size.width * .9,
                   child: ListView.builder(
                       shrinkWrap: true,
