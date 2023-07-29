@@ -1,20 +1,14 @@
 # my_movies_app_flutter
 
-Based on TMDB api,
+Based on TMDB apis,I developed this flutter app which provides a great help for movie lovers.
 
-an app provides a great help for movie buffs ,
+✔️ Provides sections for popular, upcoming,etc,       
+✔️ Provides a search functionality.      
+✔️ Connects the user to his tmdb account.     
+✔️ Watchlist and favourites list are provided.     
+✔️ Provider state management.    
 
-provides sections for popular , upcoming,etc,
-
-provides a search engine ,
-
-connect the user to tmdb account ,
-
-watchlist and favourite list are provided,
-
-auth with google account is provided.
-
-# Used Packages
+## Dependencies
   shared_preferences: ^2.1.0 <br />
   provider: ^6.0.5 <br />
   http: ^0.13.5 <br />
