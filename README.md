@@ -33,7 +33,7 @@ Based on TMDB apis,I developed this flutter app which provides a great help for 
   
   ![alt text](https://github.com/mo7amedaliEbaid/movies_app_flutter/blob/master/screen_shots/signin.png?raw=true)  
   
-  you can find more screenshots in my_movies_app_flutter/screen_shots
+
 
 
 
